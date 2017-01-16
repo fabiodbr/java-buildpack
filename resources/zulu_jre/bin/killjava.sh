@@ -1,5 +1,7 @@
+#!/usr/bin/env bash
+# Encoding: utf-8
 # Cloud Foundry Java Buildpack
-# Copyright 2013-2016 the original author or authors.
+# Copyright (c) 2013-2017 the original author or authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,8 +15,36 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Configuration for the Dynatrace framework
----
-version: 6.3.0_+
-repository_root: http://downloads.dynatracesaas.com/cloudfoundry/buildpack/java
-default_agent_name: 
+# Kill script for use as the parameter of OpenJDK's -XX:OnOutOfMemoryError
+
+set -e
+
+echo "
+Process Status (Before)
+=======================
+$(ps -ef)
+
+ulimit (Before)
+===============
+$(ulimit -a)
+
+Free Disk Space (Before)
+========================
+$(df -h)
+"
+
+pkill -9 -f .*-XX:OnOutOfMemoryError=.*killjava.*
+
+echo "
+Process Status (After)
+======================
+$(ps -ef)
+
+ulimit (After)
+==============
+$(ulimit -a)
+
+Free Disk Space (After)
+=======================
+$(df -h)
+"

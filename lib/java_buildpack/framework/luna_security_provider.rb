@@ -1,6 +1,6 @@
 # Encoding: utf-8
 # Cloud Foundry Java Buildpack
-# Copyright 2013-2016 the original author or authors.
+# Copyright 2013-2017 the original author or authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,7 +43,8 @@ module JavaBuildpack
       def release
         @droplet.environment_variables.add_environment_variable 'ChrystokiConfigurationPath', @droplet.sandbox
 
-        @droplet.java_opts
+        @droplet
+          .java_opts
           .add_system_property('java.security.properties', @droplet.sandbox + 'java.security')
           .add_system_property('java.ext.dirs', ext_dirs)
       end
@@ -57,7 +58,7 @@ module JavaBuildpack
 
       private
 
-      FILTER = /luna/.freeze
+      FILTER = /luna/
 
       private_constant :FILTER
 

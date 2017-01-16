@@ -1,6 +1,6 @@
 # Encoding: utf-8
 # Cloud Foundry Java Buildpack
-# Copyright 2013-2016 the original author or authors.
+# Copyright 2013-2017 the original author or authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,6 +43,10 @@ describe JavaBuildpack::Repository::VersionResolver do
   it 'resolves a wildcard qualifier' do
     expect(described_class.resolve(tokenized_version('1.6.0_+'), versions)).to eq(tokenized_version('1.6.0_27'))
     expect(described_class.resolve(tokenized_version('1.8.0_+'), versions)).to eq(tokenized_version('1.8.0_05'))
+  end
+
+  it 'resolves a partial-wildcard qualifier' do
+    expect(described_class.resolve(tokenized_version('1.7.0_1+'), versions)).to eq(tokenized_version('1.7.0_19'))
   end
 
   it 'resolves a non-wildcard version' do

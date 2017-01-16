@@ -76,8 +76,9 @@ To learn how to configure various properties of the buildpack, follow the "Confi
 	* [Container Certificate Trust Store](docs/framework-container_certificate_trust_store.md) ([Configuration](docs/framework-container_certificate_trust_store.md#configuration))
 	* [Container Customizer](docs/framework-container_customizer.md) ([Configuration](docs/framework-container_customizer.md#configuration))
 	* [Debug](docs/framework-debug.md) ([Configuration](docs/framework-debug.md#configuration))
-	* [Dynatrace Application Monitoring Agent](docs/framework-dyna_trace_agent.md) ([Configuration](docs/framework-dyna_trace_agent.md#configuration))
-	* [Dynatrace Ruxit Cloud Native Agent](docs/framework-ruxit_agent.md) ([Configuration](docs/framework-ruxit_agent.md#configuration))
+	* [Dyadic EKM Security Provider](docs/framework-dyadic_ekm_security_provider.md) ([Configuration](docs/framework-dyadic_ekm_security_provider.md#configuration))
+	* [Dynatrace Appmon Agent](docs/framework-dynatrace_appmon_agent.md) ([Configuration](docs/framework-dynatrace_appmon_agent.md#configuration))
+	* [Dynatrace SaaS/Managed OneAgent](docs/framework-dynatrace_one_agent.md) ([Configuration](docs/framework-dynatrace_one_agent.md#configuration))
 	* [Introscope Agent](docs/framework-introscope_agent.md) ([Configuration](docs/framework-introscope_agent.md#configuration))
 	* [Java Options](docs/framework-java_opts.md) ([Configuration](docs/framework-java_opts.md#configuration))
 	* [JRebel Agent](docs/framework-jrebel_agent.md) ([Configuration](docs/framework-jrebel_agent.md#configuration))
@@ -94,6 +95,7 @@ To learn how to configure various properties of the buildpack, follow the "Confi
 * Standard JREs
 	* [OpenJDK](docs/jre-open_jdk_jre.md) ([Configuration](docs/jre-open_jdk_jre.md#configuration))
 	* [Oracle](docs/jre-oracle_jre.md) ([Configuration](docs/jre-oracle_jre.md#configuration))
+	* [Azul Zulu](docs/jre-zulu_jre.md) ([Configuration](docs/jre-zulu_jre.md#configuration))
 * [Extending](docs/extending.md)
 	* [Application](docs/extending-application.md)
 	* [Droplet](docs/extending-droplet.md)
@@ -164,7 +166,7 @@ This buildpack is released under version 2.0 of the [Apache License][].
 
 [`config/` directory]: config
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
-[Cloud Foundry]: http://www.cloudfoundry.com
+[Cloud Foundry]: http://www.cloudfoundry.org
 [contributor guidelines]: CONTRIBUTING.md
 [disables `remote_downloads`]: docs/extending-caches.md#configuration
 [Environment Variables]: http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block
@@ -174,6 +176,6 @@ This buildpack is released under version 2.0 of the [Apache License][].
 [Play Framework]: http://www.playframework.com
 [pull request]: https://help.github.com/articles/using-pull-requests
 [Pull requests]: http://help.github.com/send-pull-requests
-[Running Cloud Foundry locally]: http://docs.cloudfoundry.org/deploying/run-local.html
+[Running Cloud Foundry locally]: http://docs.cloudfoundry.org/deploying/boshlite/index.html
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Wikipedia]: https://en.wikipedia.org/wiki/YAML#Basic_components_of_YAML
